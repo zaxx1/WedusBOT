@@ -51,9 +51,10 @@ function toVietNamTime(timeUtc) {
 async function logs(message) {
   const { username } = await getCurrentProfile(KEY_CURRENT_PROFILE);
   const project = await getCurrentProject(KEY_CURRENT_PROFILE);
+  const projectname = typeof project === 'string' ? project.toUpperCase() : 'UNKNOWN PROJECT';
   console.log(
     colors.cyan(
-      `[ ${project.toUpperCase()}${username ? ' - ' + username : ''} ]`,
+      `[ ${projectName}${username ? ' - ' + username : ''} ]`,
     ),
     colors.green(message),
   );
