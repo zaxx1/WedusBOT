@@ -59,8 +59,9 @@ async function logs(message) {
     ),
     colors.green(message),
   );
+} catch (error) {console.error("Error occured in logs function:", error.message); 
+  }
 }
-
 const formatNumber = (point = 0) => {
   return new Intl.NumberFormat('us-US').format(point);
 };
