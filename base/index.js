@@ -42,10 +42,10 @@ async function errors(message) {
   );
 }
 
-function toVietNamTime(timeUtc) {
-  const vietnamTime = dayjs.utc(timeUtc).tz('Asia/Ho_Chi_Minh');
-  const formattedVietnamTime = vietnamTime.format(FORMAT_DATE_TIME);
-  return formattedVietnamTime;
+function toIndonesiaTime(timeUtc) {
+  const IndonesiaTime = dayjs.utc(timeUtc).tz('Asia/Jakarta');
+  const formattedIndonesiaTime = indonesiaTime.format(FORMAT_DATE_TIME);
+  return formattedIndonesiaTime;
 }
 
 async function logs(message) {
@@ -54,7 +54,7 @@ async function logs(message) {
   const projectname = typeof project === 'string' ? project.toUpperCase() : 'UNKNOWN PROJECT';
   console.log(
     colors.cyan(
-      `[ ${goats}${username ? ' - ' + username : ''} ]`,
+      `[ ${project.goats}${username ? ' - ' + username : ''} ]`,
     ),
     colors.green(message),
   );
