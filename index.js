@@ -257,7 +257,7 @@ const exportModules = {
 };
 
 module.exports = exportModules;
-}
+
 
 (async function main() {
   console.log();
