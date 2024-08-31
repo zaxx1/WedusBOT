@@ -268,9 +268,9 @@ async function delay(second, show) {
     for (let i = second; i >= 0; i--) {
       readline.cursorTo(process.stdout, 0);
       process.stdout.write(
-        `${colors.dim('[ WAITING ]')} Chờ ${colors.cyan(
+        `${colors.dim('[ WAITING ]')} Tunggu ${colors.cyan(
           i + 's',
-        )} để tiếp tục vòng lặp !`,
+        )} detik untuk lanjut !`,
       );
       await new Promise((resolve) => setTimeout(resolve, 1000));
     }
