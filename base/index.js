@@ -54,7 +54,7 @@ async function logs(message) {
   const projectname = typeof project === 'string' ? project.toUpperCase() : 'UNKNOWN PROJECT';
   console.log(
     colors.cyan(
-      `[ ${projectName}${username ? ' - ' + username : ''} ]`,
+      `[ ${goats}${username ? ' - ' + username : ''} ]`,
     ),
     colors.green(message),
   );
