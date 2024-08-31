@@ -5,7 +5,7 @@ const {
   getCurrentProfile,
   setCurrentProfile,
   delay,
-} = require('../../base');
+} 
 const colors = require('colors');
 const readline = require('readline');
 const ID_QUEST_NOT_AUTO = [];
@@ -257,3 +257,11 @@ const exportModules = {
 };
 
 module.exports = exportModules;
+}
+
+(async function main() {
+  console.log();
+  await loadConfig('data.json');
+  profileSumary();
+  await startSession();
+})();
