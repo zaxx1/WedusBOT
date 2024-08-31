@@ -304,7 +304,7 @@ const publicModules = {
   delay,
   setCurrentProject,
   getCurrentProject,
-  toVietNamTime,
+  toIndonesiaTime,
   FORMAT_DATE_TIME,
   formatNumber,
   randomBetweenNumber,
