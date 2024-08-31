@@ -34,9 +34,10 @@ const headers = {
 async function errors(message) {
   const { username } = await getCurrentProfile(KEY_CURRENT_PROFILE);
   const project = await getCurrentProject(KEY_CURRENT_PROFILE);
+  const projectgoats = project && typeof project.goats === 'string' ? project.goats() : 'UNKNOWN PROJECT';
   console.log(
     colors.red(
-      `[ ${project.toUpperCase()}${username ? ' - ' + username : ''} ]`,
+      `[ ${project.goats()}${username ? ' - ' + username : ''} ]`,
     ),
     colors.red(message),
   );
@@ -51,7 +52,7 @@ function toIndonesiaTime(timeUtc) {
 async function logs(message) {
   const { username } = await getCurrentProfile(KEY_CURRENT_PROFILE);
   const project = await getCurrentProject(KEY_CURRENT_PROFILE);
-  const projectname = typeof project === 'string' ? project.toUpperCase() : 'UNKNOWN PROJECT';
+  const projectgoats = project && typeof project.goats === 'string' ? project.goats() : 'UNKNOWN PROJECT';
   console.log(
     colors.cyan(
       `[ ${project.goats}${username ? ' - ' + username : ''} ]`,
