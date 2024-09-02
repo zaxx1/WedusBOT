@@ -1,5 +1,5 @@
 const CONSTANT = {
-  TIME_REPEAT_AGAIN: 24 * 60 * 60, // 24h jam run 1 kali
+  TIME_REPEAT_AGAIN: 1 * 60, // 2 jam run sekali
   PROJECT_REPEAT: ['goats'], // Setiap hari akan menjalankan ini
 };
 
